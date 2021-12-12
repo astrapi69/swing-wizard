@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -37,14 +37,8 @@ import lombok.experimental.SuperBuilder;
 /**
  * The class {@link WizardStateMachine}.
  */
-@Getter
-@Setter
-@EqualsAndHashCode
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
-@SuperBuilder(toBuilder = true)
-public class WizardStateMachine implements IWizardStateMachine<BaseWizardState<WizardStateMachine>>
+@Getter @Setter @EqualsAndHashCode @ToString @NoArgsConstructor @AllArgsConstructor @SuperBuilder(toBuilder = true) public class WizardStateMachine
+	implements IWizardStateMachine<BaseWizardState<WizardStateMachine>>
 {
 
 	/** The current {@link BaseWizardState} object. */
@@ -53,8 +47,7 @@ public class WizardStateMachine implements IWizardStateMachine<BaseWizardState<W
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
-	public void next()
+	@Override public void next()
 	{
 		getCurrentState().goNext(this);
 	}
@@ -62,8 +55,7 @@ public class WizardStateMachine implements IWizardStateMachine<BaseWizardState<W
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
-	public void previous()
+	@Override public void previous()
 	{
 		getCurrentState().goPrevious(this);
 	}

@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -43,7 +43,7 @@ public class BaseWizardContentPanel<T> extends BaseCardLayoutPanel<BaseWizardSta
 	 */
 	public BaseWizardContentPanel()
 	{
-		this(BaseModel.of(BaseWizardStateMachineModel.<T> builder().build()));
+		this(BaseModel.of(BaseWizardStateMachineModel.<T>builder().build()));
 	}
 
 	/**

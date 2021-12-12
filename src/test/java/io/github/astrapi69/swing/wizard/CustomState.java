@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -35,196 +35,166 @@ public enum CustomState implements BaseWizardState<BaseWizardStateMachine>
 {
 
 	/** The cancel {@link CustomState} object. */
-	CANCELED {
-
-
-		@Override
-		public void cancel(final BaseWizardStateMachine stateMachine)
+	CANCELED
 		{
-			stateMachine.setCurrentState(CustomState.CANCELED);
-		}
+			@Override public void cancel(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.CANCELED);
+			}
 
-		@Override
-		public void finish(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.FINISHED);
-		}
+			@Override public void finish(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.FINISHED);
+			}
 
-		@Override
-		public String getName()
-		{
-			return name();
-		}
+			@Override public String getName()
+			{
+				return name();
+			}
 
-		@Override
-		public void goNext(final BaseWizardStateMachine stateMachine)
-		{
-		}
+			@Override public void goNext(final BaseWizardStateMachine stateMachine)
+			{
+			}
 
-		@Override
-		public void goPrevious(final BaseWizardStateMachine stateMachine)
-		{
-		}
+			@Override public void goPrevious(final BaseWizardStateMachine stateMachine)
+			{
+			}
 
-	},
+		},
 
 	/** The finish {@link CustomState} object. */
-	FINISHED {
-
-		@Override
-		public void cancel(final BaseWizardStateMachine stateMachine)
+	FINISHED
 		{
-			stateMachine.setCurrentState(CustomState.CANCELED);
-		}
+			@Override public void cancel(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.CANCELED);
+			}
 
-		@Override
-		public void finish(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.FINISHED);
-		}
+			@Override public void finish(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.FINISHED);
+			}
 
-		@Override
-		public String getName()
-		{
-			return name();
-		}
+			@Override public String getName()
+			{
+				return name();
+			}
 
-		@Override
-		public void goNext(final BaseWizardStateMachine stateMachine)
-		{
-		}
+			@Override public void goNext(final BaseWizardStateMachine stateMachine)
+			{
+			}
 
-		@Override
-		public void goPrevious(final BaseWizardStateMachine stateMachine)
-		{
-		}
+			@Override public void goPrevious(final BaseWizardStateMachine stateMachine)
+			{
+			}
 
-	},
+		},
 
 	/** The first {@link CustomState} object. */
-	FIRST {
-
-		@Override
-		public void cancel(final BaseWizardStateMachine stateMachine)
+	FIRST
 		{
-			stateMachine.setCurrentState(CustomState.CANCELED);
-		}
+			@Override public void cancel(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.CANCELED);
+			}
 
-		@Override
-		public void finish(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.FINISHED);
-		}
+			@Override public void finish(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.FINISHED);
+			}
 
-		@Override
-		public String getName()
-		{
-			return name();
-		}
+			@Override public String getName()
+			{
+				return name();
+			}
 
-		@Override
-		public void goNext(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.SECOND);
-		}
+			@Override public void goNext(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.SECOND);
+			}
 
-		@Override
-		public void goPrevious(final BaseWizardStateMachine input)
-		{
-		}
+			@Override public void goPrevious(final BaseWizardStateMachine input)
+			{
+			}
 
-		@Override
-		public boolean hasPrevious()
-		{
-			return false;
-		}
+			@Override public boolean hasPrevious()
+			{
+				return false;
+			}
 
-		@Override
-		public boolean isFirst()
-		{
-			return true;
-		}
+			@Override public boolean isFirst()
+			{
+				return true;
+			}
 
-	},
+		},
 
 	/** The second {@link CustomState} object. */
-	SECOND {
-
-		@Override
-		public void cancel(final BaseWizardStateMachine stateMachine)
+	SECOND
 		{
-			stateMachine.setCurrentState(CustomState.CANCELED);
-		}
+			@Override public void cancel(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.CANCELED);
+			}
 
-		@Override
-		public void finish(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.FINISHED);
-		}
+			@Override public void finish(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.FINISHED);
+			}
 
-		@Override
-		public String getName()
-		{
-			return name();
-		}
+			@Override public String getName()
+			{
+				return name();
+			}
 
-		@Override
-		public void goNext(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.THIRD);
-		}
+			@Override public void goNext(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.THIRD);
+			}
 
-		@Override
-		public void goPrevious(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.FIRST);
-		}
+			@Override public void goPrevious(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.FIRST);
+			}
 
-	},
+		},
 
 	/** The third {@link CustomState} object. */
-	THIRD {
-
-		@Override
-		public void cancel(final BaseWizardStateMachine stateMachine)
+	THIRD
 		{
-			stateMachine.setCurrentState(CustomState.CANCELED);
-		}
+			@Override public void cancel(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.CANCELED);
+			}
 
-		@Override
-		public void finish(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(CustomState.FINISHED);
-		}
+			@Override public void finish(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(CustomState.FINISHED);
+			}
 
-		@Override
-		public String getName()
-		{
-			return name();
-		}
+			@Override public String getName()
+			{
+				return name();
+			}
 
-		@Override
-		public void goNext(final BaseWizardStateMachine stateMachine)
-		{
-		}
+			@Override public void goNext(final BaseWizardStateMachine stateMachine)
+			{
+			}
 
-		@Override
-		public void goPrevious(final BaseWizardStateMachine stateMachine)
-		{
-			stateMachine.setCurrentState(SECOND);
-		}
+			@Override public void goPrevious(final BaseWizardStateMachine stateMachine)
+			{
+				stateMachine.setCurrentState(SECOND);
+			}
 
-		@Override
-		public boolean hasNext()
-		{
-			return false;
-		}
+			@Override public boolean hasNext()
+			{
+				return false;
+			}
 
-		@Override
-		public boolean isLast()
-		{
-			return true;
-		}
+			@Override public boolean isLast()
+			{
+				return true;
+			}
 
-	}
+		}
 }

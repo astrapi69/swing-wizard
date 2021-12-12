@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,21 +24,19 @@
  */
 package io.github.astrapi69.swing.wizard;
 
-import java.awt.*;
-
-import javax.swing.*;
-import javax.swing.border.LineBorder;
-
-import lombok.Getter;
 import io.github.astrapi69.model.BaseModel;
 import io.github.astrapi69.model.api.Model;
 import io.github.astrapi69.swing.base.BasePanel;
+import lombok.Getter;
+
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+import java.awt.*;
 
 /**
  * The class {@link NavigationPanel}.
  */
-@Getter
-public class NavigationPanel<T> extends BasePanel<T>
+@Getter public class NavigationPanel<T> extends BasePanel<T>
 {
 
 	/** The Constant serialVersionUID. */
@@ -111,8 +109,7 @@ public class NavigationPanel<T> extends BasePanel<T>
 	{
 	}
 
-	@Override
-	protected void onInitializeComponents()
+	@Override protected void onInitializeComponents()
 	{
 		btnNext = newNextButton("Next");
 		btnPrevious = newPreviousButton("Previous");
@@ -124,8 +121,7 @@ public class NavigationPanel<T> extends BasePanel<T>
 		add(btnFinish);
 	}
 
-	@Override
-	protected void onInitializeLayout()
+	@Override protected void onInitializeLayout()
 	{
 		setBorder(new LineBorder(Color.BLACK));
 	}

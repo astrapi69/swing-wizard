@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -51,8 +51,7 @@ public class WizardContentPanel extends BaseCardLayoutPanel<Object>
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
-	protected void onInitializeComponents()
+	@Override protected void onInitializeComponents()
 	{
 		add(new FirstStepPanel(), CustomState.FIRST.getName());
 		add(new SecondStepPanel(), CustomState.SECOND.getName());

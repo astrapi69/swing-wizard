@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,14 +24,14 @@
  */
 package io.github.astrapi69.swing.wizard;
 
-import java.awt.*;
-
-import lombok.Getter;
-import lombok.Setter;
 import io.github.astrapi69.design.pattern.state.wizard.model.BaseWizardStateMachineModel;
 import io.github.astrapi69.model.BaseModel;
 import io.github.astrapi69.model.api.Model;
 import io.github.astrapi69.swing.base.BasePanel;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.awt.*;
 
 /**
  * The class {@link AbstractWizardPanel} serves as the base class for wizard panels.
@@ -39,9 +39,7 @@ import io.github.astrapi69.swing.base.BasePanel;
  * @param <T>
  *            the generic type of the model object
  */
-@Getter
-@Setter
-public abstract class AbstractWizardPanel<T> extends BasePanel<T>
+@Getter @Setter public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 {
 
 	/** The Constant serialVersionUID. */
@@ -94,8 +92,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 			/**
 			 * {@inheritDoc}
 			 */
-			@Override
-			protected void onCancel()
+			@Override protected void onCancel()
 			{
 				AbstractWizardPanel.this.onCancel();
 			}
@@ -103,8 +100,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 			/**
 			 * {@inheritDoc}
 			 */
-			@Override
-			protected void onFinish()
+			@Override protected void onFinish()
 			{
 				AbstractWizardPanel.this.onFinish();
 			}
@@ -112,8 +108,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 			/**
 			 * {@inheritDoc}
 			 */
-			@Override
-			protected void onNext()
+			@Override protected void onNext()
 			{
 				AbstractWizardPanel.this.onNext();
 			}
@@ -121,8 +116,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 			/**
 			 * {@inheritDoc}
 			 */
-			@Override
-			protected void onPrevious()
+			@Override protected void onPrevious()
 			{
 				AbstractWizardPanel.this.onPrevious();
 			}
@@ -160,8 +154,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
-	protected void onInitializeComponents()
+	@Override protected void onInitializeComponents()
 	{
 		super.onInitializeComponents();
 		wizardContentPanel = newWizardContentPanel(BaseModel.of(getStateMachine()));
@@ -171,8 +164,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
-	protected void onInitializeLayout()
+	@Override protected void onInitializeLayout()
 	{
 		super.onInitializeLayout();
 		setLayout(new BorderLayout());

@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2021 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -41,7 +41,8 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 
 	public WizardPanel()
 	{
-		this(BaseModel.of(BaseWizardStateMachine.builder().currentState(CustomState.FIRST).build()));
+		this(
+			BaseModel.of(BaseWizardStateMachine.builder().currentState(CustomState.FIRST).build()));
 	}
 
 	public WizardPanel(final Model<BaseWizardStateMachine> model)
@@ -69,26 +70,22 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 		{
 			private static final long serialVersionUID = 1L;
 
-			@Override
-			protected void onCancel()
+			@Override protected void onCancel()
 			{
 				WizardPanel.this.onCancel();
 			}
 
-			@Override
-			protected void onFinish()
+			@Override protected void onFinish()
 			{
 				WizardPanel.this.onFinish();
 			}
 
-			@Override
-			protected void onNext()
+			@Override protected void onNext()
 			{
 				WizardPanel.this.onNext();
 			}
 
-			@Override
-			protected void onPrevious()
+			@Override protected void onPrevious()
 			{
 				WizardPanel.this.onPrevious();
 			}
@@ -102,8 +99,7 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 		return cardsPanel;
 	}
 
-	@Override
-	protected void onAfterInitializeComponents()
+	@Override protected void onAfterInitializeComponents()
 	{
 		super.onAfterInitializeComponents();
 		updateButtonState();
@@ -124,16 +120,14 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 		System.exit(0);
 	}
 
-	@Override
-	protected void onInitializeComponents()
+	@Override protected void onInitializeComponents()
 	{
 		super.onInitializeComponents();
 		wizardContentPanel = newWizardContentPanel();
 		navigationPanel = newNavigationPanel();
 	}
 
-	@Override
-	protected void onInitializeLayout()
+	@Override protected void onInitializeLayout()
 	{
 		super.onInitializeLayout();
 		setLayout(new BorderLayout());
