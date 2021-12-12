@@ -51,7 +51,8 @@ public class WizardContentPanel extends BaseCardLayoutPanel<Object>
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override protected void onInitializeComponents()
+	@Override
+	protected void onInitializeComponents()
 	{
 		add(new FirstStepPanel(), CustomState.FIRST.getName());
 		add(new SecondStepPanel(), CustomState.SECOND.getName());

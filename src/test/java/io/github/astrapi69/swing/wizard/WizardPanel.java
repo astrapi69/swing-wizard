@@ -24,13 +24,14 @@
  */
 package io.github.astrapi69.swing.wizard;
 
+import java.awt.*;
+
+import javax.swing.*;
+
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardStateMachine;
 import io.github.astrapi69.model.BaseModel;
 import io.github.astrapi69.model.api.Model;
 import io.github.astrapi69.swing.base.BasePanel;
-
-import javax.swing.*;
-import java.awt.*;
 
 public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 {
@@ -70,22 +71,26 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 		{
 			private static final long serialVersionUID = 1L;
 
-			@Override protected void onCancel()
+			@Override
+			protected void onCancel()
 			{
 				WizardPanel.this.onCancel();
 			}
 
-			@Override protected void onFinish()
+			@Override
+			protected void onFinish()
 			{
 				WizardPanel.this.onFinish();
 			}
 
-			@Override protected void onNext()
+			@Override
+			protected void onNext()
 			{
 				WizardPanel.this.onNext();
 			}
 
-			@Override protected void onPrevious()
+			@Override
+			protected void onPrevious()
 			{
 				WizardPanel.this.onPrevious();
 			}
@@ -99,7 +104,8 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 		return cardsPanel;
 	}
 
-	@Override protected void onAfterInitializeComponents()
+	@Override
+	protected void onAfterInitializeComponents()
 	{
 		super.onAfterInitializeComponents();
 		updateButtonState();
@@ -120,14 +126,16 @@ public class WizardPanel extends BasePanel<BaseWizardStateMachine>
 		System.exit(0);
 	}
 
-	@Override protected void onInitializeComponents()
+	@Override
+	protected void onInitializeComponents()
 	{
 		super.onInitializeComponents();
 		wizardContentPanel = newWizardContentPanel();
 		navigationPanel = newNavigationPanel();
 	}
 
-	@Override protected void onInitializeLayout()
+	@Override
+	protected void onInitializeLayout()
 	{
 		super.onInitializeLayout();
 		setLayout(new BorderLayout());

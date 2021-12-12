@@ -24,8 +24,6 @@
  */
 package io.github.astrapi69.swing.wizard;
 
-import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
-import io.github.astrapi69.design.pattern.state.wizard.IWizardStateMachine;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,12 +31,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
+import io.github.astrapi69.design.pattern.state.wizard.IWizardStateMachine;
 
 /**
  * The class {@link WizardStateMachine}.
  */
-@Getter @Setter @EqualsAndHashCode @ToString @NoArgsConstructor @AllArgsConstructor @SuperBuilder(toBuilder = true) public class WizardStateMachine
-	implements IWizardStateMachine<BaseWizardState<WizardStateMachine>>
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder(toBuilder = true)
+public class WizardStateMachine implements IWizardStateMachine<BaseWizardState<WizardStateMachine>>
 {
 
 	/** The current {@link BaseWizardState} object. */
@@ -47,7 +53,8 @@ import lombok.experimental.SuperBuilder;
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override public void next()
+	@Override
+	public void next()
 	{
 		getCurrentState().goNext(this);
 	}
@@ -55,7 +62,8 @@ import lombok.experimental.SuperBuilder;
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override public void previous()
+	@Override
+	public void previous()
 	{
 		getCurrentState().goPrevious(this);
 	}

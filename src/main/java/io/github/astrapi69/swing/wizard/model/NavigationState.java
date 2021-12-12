@@ -24,20 +24,23 @@
  */
 package io.github.astrapi69.swing.wizard.model;
 
-import io.github.astrapi69.swing.wizard.NavigationPanel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
+import io.github.astrapi69.swing.wizard.NavigationPanel;
 
 /**
  * The enum {@link NavigationState} holds several navigation states that can occur. Can be used for
  * validate and set the {@link NavigationPanel}.
  */
-@Getter @ToString @AllArgsConstructor public enum NavigationState
+@Getter
+@ToString
+@AllArgsConstructor
+public enum NavigationState
 {
 	CANCEL(false, false, true, false), CANCEL_FINISH(false, false, true, true), NEXT_CANCEL_FINISH(
-	false, true, true, true), PREVIOUS_NEXT_CANCEL_FINISH(true, true, true, true), RESET(false,
-	false, false, false);
+		false, true, true, true), PREVIOUS_NEXT_CANCEL_FINISH(true, true, true,
+			true), RESET(false, false, false, false);
 
 
 	/** The flag that signals if cancel is valid or not. */

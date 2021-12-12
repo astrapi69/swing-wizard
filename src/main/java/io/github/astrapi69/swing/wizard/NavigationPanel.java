@@ -24,19 +24,21 @@
  */
 package io.github.astrapi69.swing.wizard;
 
-import io.github.astrapi69.model.BaseModel;
-import io.github.astrapi69.model.api.Model;
-import io.github.astrapi69.swing.base.BasePanel;
-import lombok.Getter;
+import java.awt.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import java.awt.*;
+
+import lombok.Getter;
+import io.github.astrapi69.model.BaseModel;
+import io.github.astrapi69.model.api.Model;
+import io.github.astrapi69.swing.base.BasePanel;
 
 /**
  * The class {@link NavigationPanel}.
  */
-@Getter public class NavigationPanel<T> extends BasePanel<T>
+@Getter
+public class NavigationPanel<T> extends BasePanel<T>
 {
 
 	/** The Constant serialVersionUID. */
@@ -109,7 +111,8 @@ import java.awt.*;
 	{
 	}
 
-	@Override protected void onInitializeComponents()
+	@Override
+	protected void onInitializeComponents()
 	{
 		btnNext = newNextButton("Next");
 		btnPrevious = newPreviousButton("Previous");
@@ -121,7 +124,8 @@ import java.awt.*;
 		add(btnFinish);
 	}
 
-	@Override protected void onInitializeLayout()
+	@Override
+	protected void onInitializeLayout()
 	{
 		setBorder(new LineBorder(Color.BLACK));
 	}

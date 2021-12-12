@@ -34,7 +34,13 @@ import lombok.ToString;
 /**
  * The abstract class {@link AbstractWizardModel} act as a base wizard model.<br>
  */
-@Getter @Setter @EqualsAndHashCode @ToString @NoArgsConstructor @AllArgsConstructor public abstract class AbstractWizardModel
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public abstract class AbstractWizardModel
 {
 
 	/** The flag that signals if cancel is valid or not. */
