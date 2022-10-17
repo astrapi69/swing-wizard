@@ -21,12 +21,6 @@ a simple swing wizard panel.
 >
 > If you love this project [![donation](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 
-# Template from this project
-
-You can derive your java library project from this you can easily and adapt to your specific project
-if you follow the instruction from
-this [medium blog](https://asterios-raptis.medium.com/new-github-template-repository-feature-ec09afe261b8)
-
 ## Note
 
 No animals were harmed in the making of this library.
@@ -47,23 +41,23 @@ functionality of swing-wizard:
 
 Than you can add the dependency to your dependencies:
 
-	<properties>
-			...
-		<!-- swing-wizard version -->
-		<swing-wizard.version>1</swing-wizard.version>
-			...
-	</properties>
-			...
-		<dependencies>
-			...
-			<!-- swing-wizard DEPENDENCY -->
-			<dependency>
-				<groupId>io.github.astrapi69</groupId>
-				<artifactId>swing-wizard</artifactId>
-				<version>${swing-wizard.version}</version>
-			</dependency>
-			...
-		</dependencies>
+    <properties>
+            ...
+        <!-- swing-wizard version -->
+        <swing-wizard.version>2</swing-wizard.version>
+            ...
+    </properties>
+            ...
+        <dependencies>
+            ...
+            <!-- swing-wizard DEPENDENCY -->
+            <dependency>
+                <groupId>io.github.astrapi69</groupId>
+                <artifactId>swing-wizard</artifactId>
+                <version>${swing-wizard.version}</version>
+            </dependency>
+            ...
+        </dependencies>
 
 ## gradle dependency
 
@@ -73,16 +67,16 @@ your project `build.gradle` if you want to import the core functionality of swin
 define version in file gradle.properties
 
 ```
-swingWizardVersion=1
+swingWizardVersion=2
 ```
 
 or in build.gradle ext area
 
 ```
 ext {
-			...
-    swingWizardVersion = "1"
-			...
+            ...
+    swingWizardVersion = "2"
+            ...
 }
 ```
 
@@ -90,9 +84,9 @@ then add the dependency to the dependencies area
 
 ```
 dependencies {
-			...
+            ...
     implementation("io.github.astrapi69:swing-wizard:$swingWizardVersion")
-			...
+            ...
 }
 ```
 
@@ -192,8 +186,4 @@ reports, or feature requests.
 
 - Feature requests, questions and bug reports can be reported at
   the [issues page](https://github.com/astrapi69/swing-wizard/issues).
-
-## Similar projects
-
-## Credits
 

@@ -31,7 +31,7 @@ import javax.swing.border.LineBorder;
 
 import lombok.Getter;
 import io.github.astrapi69.model.BaseModel;
-import io.github.astrapi69.model.api.Model;
+import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.BasePanel;
 
 /**
@@ -70,7 +70,7 @@ public class NavigationPanel<T> extends BasePanel<T>
 	 * @param model
 	 *            the model
 	 */
-	public NavigationPanel(Model<T> model)
+	public NavigationPanel(IModel<T> model)
 	{
 		super(model);
 	}

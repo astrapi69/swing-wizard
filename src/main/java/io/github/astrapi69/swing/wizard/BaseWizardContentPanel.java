@@ -26,7 +26,7 @@ package io.github.astrapi69.swing.wizard;
 
 import io.github.astrapi69.design.pattern.state.wizard.model.BaseWizardStateMachineModel;
 import io.github.astrapi69.model.BaseModel;
-import io.github.astrapi69.model.api.Model;
+import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.BaseCardLayoutPanel;
 
 /**
@@ -52,7 +52,7 @@ public class BaseWizardContentPanel<T> extends BaseCardLayoutPanel<BaseWizardSta
 	 * @param model
 	 *            the model
 	 */
-	public BaseWizardContentPanel(Model<BaseWizardStateMachineModel<T>> model)
+	public BaseWizardContentPanel(IModel<BaseWizardStateMachineModel<T>> model)
 	{
 		super(model);
 	}

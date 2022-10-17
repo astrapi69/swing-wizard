@@ -30,7 +30,7 @@ import lombok.Getter;
 import lombok.Setter;
 import io.github.astrapi69.design.pattern.state.wizard.model.BaseWizardStateMachineModel;
 import io.github.astrapi69.model.BaseModel;
-import io.github.astrapi69.model.api.Model;
+import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.BasePanel;
 
 /**
@@ -70,7 +70,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	 * @param model
 	 *            the model
 	 */
-	public AbstractWizardPanel(Model<T> model)
+	public AbstractWizardPanel(IModel<T> model)
 	{
 		super(model);
 	}
@@ -83,7 +83,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	 * @return the new {@link NavigationPanel} object.
 	 */
 	protected NavigationPanel<BaseWizardStateMachineModel<T>> newNavigationPanel(
-		Model<BaseWizardStateMachineModel<T>> model)
+		IModel<BaseWizardStateMachineModel<T>> model)
 	{
 		final NavigationPanel<BaseWizardStateMachineModel<T>> navigationPanel = new NavigationPanel<BaseWizardStateMachineModel<T>>()
 		{
@@ -139,7 +139,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	 * @return the new {@link BaseWizardContentPanel} object
 	 */
 	protected abstract BaseWizardContentPanel<T> newWizardContentPanel(
-		Model<BaseWizardStateMachineModel<T>> model);
+		IModel<BaseWizardStateMachineModel<T>> model);
 
 	/**
 	 * Callback method for the cancel action.
