@@ -4,6 +4,15 @@
 Version 2.1-SNAPSHOT
 -------------
 
+ADDED:
+
+- new libs.versions.toml file for new automatic catalog versions update
+
+CHANGED:
+
+- update of JDK to newer version 17
+- update gradle to new version 8.8
+
 Version 2
 -------------
 
