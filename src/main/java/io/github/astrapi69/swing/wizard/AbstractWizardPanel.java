@@ -26,12 +26,12 @@ package io.github.astrapi69.swing.wizard;
 
 import java.awt.*;
 
-import lombok.Getter;
-import lombok.Setter;
 import io.github.astrapi69.design.pattern.state.wizard.model.BaseWizardStateMachineModel;
 import io.github.astrapi69.model.BaseModel;
 import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.BasePanel;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * The class {@link AbstractWizardPanel} serves as the base class for wizard panels.

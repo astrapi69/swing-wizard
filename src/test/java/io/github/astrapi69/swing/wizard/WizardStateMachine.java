@@ -24,6 +24,8 @@
  */
 package io.github.astrapi69.swing.wizard;
 
+import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
+import io.github.astrapi69.design.pattern.state.wizard.IWizardStateMachine;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -31,8 +33,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
-import io.github.astrapi69.design.pattern.state.wizard.IWizardStateMachine;
 
 /**
  * The class {@link WizardStateMachine}.
