@@ -11,14 +11,15 @@ ADDED:
 CHANGED:
 
 - update of JDK to newer version 17
-- update gradle to new version 8.8
-- update of dependency lombok version to 1.18.32
+- update gradle to new version 8.9
+- update of dependency lombok version to 1.18.34
 - update of gradle-plugin dependency with id 'com.github.ben-manes.versions' to new patch version 0.51.0
 - update of gradle-plugin dependency with id 'org.ajoberstar.grgit' to new patch version 5.2.2
 - update of gradle-plugin dependency with id 'io.freefair.lombok' to new patch version 8.6
 - update of gradle-plugin dependency with id 'com.diffplug.spotless' to new beta version 7.0.0.BETA1
 - update of dependency swing-base-components to new version 2.4
 - update of dependency model-data to new version to 3.1
+- update of test dependency file-worker version to 17.3
 - update of test dependency silly-io to new version to 3.1
 
 Version 2

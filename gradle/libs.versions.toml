@@ -1,21 +1,21 @@
 [versions]
-file-worker-version = "17.2"
+file-worker-version = "17.3"
 gradle-plugin-grgit-version = "5.2.2"
 gradle-plugin-license-version = "0.16.1"
 gradle-plugin-lombok-version = "8.6"
 gradle-plugin-spotless-version = "7.0.0.BETA1"
 gradle-plugin-version-catalog-update-version = "0.8.4"
 gradle-plugin-versions-version = "0.51.0"
-junit-jupiter-version = "5.11.0-M2"
-junit-platform-launcher-version = "1.11.0-M2"
-lombok-version = "1.18.32"
+junit-jupiter-version = "5.11.0-RC1"
+junit-platform-launcher-version = "1.11.0-RC1"
+lombok-version = "1.18.34"
 meanbean-version = "2.0.3"
 model-data-version = "3.1"
 silly-io-version = "3.1"
 state-version = "6"
 swing-base-components-version = "4.2"
 swingx-all-version = "1.6.5-1"
-throwable-version = "2.3"
+throwable-version = "3"
 
 [libraries]
 file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
