@@ -30,36 +30,14 @@ No animals were harmed in the making of this library.
 The source code comes under the liberal MIT License, making swing-wizard great for all types of
 applications.
 
-## Maven dependency
+## Import dependencies to your project
 
-Maven dependency is now on sonatype. Check
-out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~io.github.astrapi69~swing-wizard~~~)
-for latest snapshots and releases.
-
-Add the following maven dependency to your project `pom.xml` if you want to import the core
-functionality of swing-wizard:
-
-Than you can add the dependency to your dependencies:
-
-    <properties>
-            ...
-        <!-- swing-wizard version -->
-        <swing-wizard.version>2</swing-wizard.version>
-            ...
-    </properties>
-            ...
-        <dependencies>
-            ...
-            <!-- swing-wizard DEPENDENCY -->
-            <dependency>
-                <groupId>io.github.astrapi69</groupId>
-                <artifactId>swing-wizard</artifactId>
-                <version>${swing-wizard.version}</version>
-            </dependency>
-            ...
-        </dependencies>
+<details>
+  <summary>gradle (click to expand)</summary>
 
 ## gradle dependency
+
+Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/swing-wizard/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/swing-wizard)
 
 You can first define the version in the ext section and add than the following gradle dependency to
 your project `build.gradle` if you want to import the core functionality of swing-wizard:
@@ -67,28 +45,102 @@ your project `build.gradle` if you want to import the core functionality of swin
 define version in file gradle.properties
 
 ```
-swingWizardVersion=2
+swingWizardVersion=${latestVersion}
 ```
 
 or in build.gradle ext area
 
 ```
-ext {
-            ...
-    swingWizardVersion = "2"
-            ...
-}
+    swingWizardVersion = "${latestVersion}"
 ```
 
 then add the dependency to the dependencies area
 
 ```
-dependencies {
-            ...
     implementation("io.github.astrapi69:swing-wizard:$swingWizardVersion")
-            ...
+```
+
+# with new libs.versions.toml file
+
+If you use the new libs.versions.toml file for new automatic catalog versions update
+
+```
+[versions]
+swing-wizard-version=${latestVersion}
+
+[libraries]
+swing-wizard = { module = "io.github.astrapi69:swing-wizard", version.ref = "swing-wizard-version" }
+```
+then add the dependency to the dependencies area
+
+```
+    implementation libs.swing.wizard
+```
+</details>
+
+<details>
+  <summary>Maven (click to expand)</summary>
+
+## Maven dependency
+
+Maven dependency is now on sonatype.
+Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~io.github.astrapi69~swing-wizard~~~) for latest snapshots and releases.
+
+Add the following maven dependency to your project `pom.xml` if you want to import the core
+functionality of swing-wizard:
+
+Then you can add the dependency to your dependencies:
+
+    <properties>
+        ...
+```xml
+        <!-- swing-wizard version -->
+        <swing-wizard.version>${latestVersion}</swing-wizard.version>
+```
+        ...
+    </properties>
+        ...
+        <dependencies>
+        ...
+```xml
+            <!-- swing-wizard DEPENDENCY -->
+            <dependency>
+                <groupId>io.github.astrapi69</groupId>
+                <artifactId>swing-wizard</artifactId>
+                <version>${swing-wizard.version}</version>
+            </dependency>
+```
+        ...
+        </dependencies>
+</details>
+
+
+<details>
+  <summary>Snapshots (click to expand)</summary>
+
+## 📸 Snapshots
+
+[![Snapshot](https://img.shields.io/badge/dynamic/xml?url=https://oss.sonatype.org/service/local/repositories/snapshots/content/io/github/astrapi69/swing-wizard/maven-metadata.xml&label=snapshot&color=red&query=.//versioning/latest)](https://oss.sonatype.org/content/repositories/snapshots/io/github/astrapi69/swing-wizard/)
+
+This section describes how to import snapshot versions into your project.
+Add the following code snippet to your gradle file in the repositories section:
+```
+repositories {
+   //...
+```
+```groovy
+    maven {
+        name "Sonatype Nexus Snapshots"
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
+```
+```
 }
 ```
+</details>
 
 # Donations
 

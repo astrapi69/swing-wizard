@@ -8,7 +8,7 @@ dependencies {
     implementation libs.swingx.all
     implementation libs.swing.base.components
     implementation libs.model.data
-    implementation libs.state
+    implementation libs.state.pattern
     testImplementation libs.silly.io
     testImplementation libs.file.worker
     testImplementation libs.throwable
