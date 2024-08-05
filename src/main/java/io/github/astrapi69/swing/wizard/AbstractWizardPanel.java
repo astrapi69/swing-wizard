@@ -76,11 +76,11 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	}
 
 	/**
-	 * Factory method for create new {@link NavigationPanel} object.
+	 * Factory method to create a new {@link NavigationPanel} object.
 	 *
 	 * @param model
 	 *            the model
-	 * @return the new {@link NavigationPanel} object.
+	 * @return the new {@link NavigationPanel} object
 	 */
 	protected NavigationPanel<BaseWizardStateMachineModel<T>> newNavigationPanel(
 		IModel<BaseWizardStateMachineModel<T>> model)
@@ -131,7 +131,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	}
 
 	/**
-	 * Abstract factory method for create new {@link BaseWizardContentPanel} object that have to be
+	 * Abstract factory method to create a new {@link BaseWizardContentPanel} object that must be
 	 * implemented to provide specific content for the wizard.
 	 *
 	 * @param model
@@ -205,8 +205,7 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 	}
 
 	/**
-	 * Update the button states. Overwrite this method for activate or disable the navigation
-	 * buttons.
+	 * Update the button states. Override this method to activate or disable the navigation buttons.
 	 */
 	protected void updateButtonState()
 	{
@@ -214,5 +213,4 @@ public abstract class AbstractWizardPanel<T> extends BasePanel<T>
 			.setEnabled(getStateMachine().getCurrentState().hasPrevious());
 		getNavigationPanel().getBtnNext().setEnabled(getStateMachine().getCurrentState().hasNext());
 	}
-
 }

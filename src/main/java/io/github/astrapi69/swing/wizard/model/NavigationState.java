@@ -30,7 +30,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 /**
- * The enum {@link NavigationState} holds several navigation states that can occur. Can be used for
+ * The enum {@link NavigationState} holds several navigation states that can occur. Can be used to
  * validate and set the {@link NavigationPanel}.
  */
 @Getter
@@ -38,10 +38,31 @@ import lombok.ToString;
 @AllArgsConstructor
 public enum NavigationState
 {
-	CANCEL(false, false, true, false), CANCEL_FINISH(false, false, true, true), NEXT_CANCEL_FINISH(
-		false, true, true, true), PREVIOUS_NEXT_CANCEL_FINISH(true, true, true,
-			true), RESET(false, false, false, false);
 
+	/**
+	 * Cancel navigation state.
+	 */
+	CANCEL(false, false, true, false),
+
+	/**
+	 * Cancel finish navigation state.
+	 */
+	CANCEL_FINISH(false, false, true, true),
+
+	/**
+	 * Next cancel finish navigation state.
+	 */
+	NEXT_CANCEL_FINISH(false, true, true, true),
+
+	/**
+	 * Previous next cancel finish navigation state.
+	 */
+	PREVIOUS_NEXT_CANCEL_FINISH(true, true, true, true),
+
+	/**
+	 * Reset navigation state.
+	 */
+	RESET(false, false, false, false);
 
 	/** The flag that signals if cancel is valid or not. */
 	private final boolean validCancel;
@@ -54,5 +75,4 @@ public enum NavigationState
 
 	/** The flag that signals if previous is valid or not. */
 	private final boolean validPrevious;
-
 }

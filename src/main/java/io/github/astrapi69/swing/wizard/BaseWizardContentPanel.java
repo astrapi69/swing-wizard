@@ -30,7 +30,10 @@ import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.BaseCardLayoutPanel;
 
 /**
- * The class {@link BaseWizardContentPanel}.
+ * The class {@link BaseWizardContentPanel} provides the content panel for a wizard.
+ *
+ * @param <T>
+ *            the generic type of the model object
  */
 public class BaseWizardContentPanel<T> extends BaseCardLayoutPanel<BaseWizardStateMachineModel<T>>
 {
@@ -56,5 +59,4 @@ public class BaseWizardContentPanel<T> extends BaseCardLayoutPanel<BaseWizardSta
 	{
 		super(model);
 	}
-
 }

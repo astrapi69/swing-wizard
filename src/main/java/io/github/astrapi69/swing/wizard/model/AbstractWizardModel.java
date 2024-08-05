@@ -32,7 +32,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * The abstract class {@link AbstractWizardModel} act as a base wizard model.<br>
+ * The abstract class {@link AbstractWizardModel} acts as a base wizard model.
  */
 @Getter
 @Setter

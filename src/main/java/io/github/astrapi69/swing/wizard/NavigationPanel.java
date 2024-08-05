@@ -35,7 +35,10 @@ import io.github.astrapi69.swing.base.BasePanel;
 import lombok.Getter;
 
 /**
- * The class {@link NavigationPanel}.
+ * The class {@link NavigationPanel} provides navigation buttons for a wizard.
+ *
+ * @param <T>
+ *            the generic type of the model object
  */
 @Getter
 public class NavigationPanel<T> extends BasePanel<T>
@@ -75,6 +78,13 @@ public class NavigationPanel<T> extends BasePanel<T>
 		super(model);
 	}
 
+	/**
+	 * Creates a new cancel button with the given label.
+	 *
+	 * @param label
+	 *            the label for the button
+	 * @return the new cancel button
+	 */
 	protected JButton newCancelButton(final String label)
 	{
 		final JButton button = new JButton(label);
@@ -82,6 +92,13 @@ public class NavigationPanel<T> extends BasePanel<T>
 		return button;
 	}
 
+	/**
+	 * Creates a new finish button with the given label.
+	 *
+	 * @param label
+	 *            the label for the button
+	 * @return the new finish button
+	 */
 	protected JButton newFinishButton(final String label)
 	{
 		final JButton button = new JButton(label);
@@ -89,6 +106,13 @@ public class NavigationPanel<T> extends BasePanel<T>
 		return button;
 	}
 
+	/**
+	 * Creates a new next button with the given label.
+	 *
+	 * @param label
+	 *            the label for the button
+	 * @return the new next button
+	 */
 	protected JButton newNextButton(final String label)
 	{
 		final JButton button = new JButton(label);
@@ -96,6 +120,13 @@ public class NavigationPanel<T> extends BasePanel<T>
 		return button;
 	}
 
+	/**
+	 * Creates a new previous button with the given label.
+	 *
+	 * @param label
+	 *            the label for the button
+	 * @return the new previous button
+	 */
 	protected JButton newPreviousButton(final String label)
 	{
 		final JButton button = new JButton(label);
@@ -103,14 +134,23 @@ public class NavigationPanel<T> extends BasePanel<T>
 		return button;
 	}
 
+	/**
+	 * Callback method for the cancel action.
+	 */
 	protected void onCancel()
 	{
 	}
 
+	/**
+	 * Callback method for the finish action.
+	 */
 	protected void onFinish()
 	{
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	protected void onInitializeComponents()
 	{
@@ -124,18 +164,26 @@ public class NavigationPanel<T> extends BasePanel<T>
 		add(btnFinish);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	protected void onInitializeLayout()
 	{
 		setBorder(new LineBorder(Color.BLACK));
 	}
 
+	/**
+	 * Callback method for the next action.
+	 */
 	protected void onNext()
 	{
 	}
 
+	/**
+	 * Callback method for the previous action.
+	 */
 	protected void onPrevious()
 	{
 	}
-
 }
