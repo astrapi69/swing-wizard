@@ -1,11 +1,12 @@
 ## Change log
 ----------------------
 
-Version 2.1-SNAPSHOT
+Version 2.1
 -------------
 
 ADDED:
 
+- new module-info.java file for modularization
 - new libs.versions.toml file for new automatic catalog versions update
 
 CHANGED:
@@ -21,6 +22,7 @@ CHANGED:
 - update of dependency model-data to new version to 3.1
 - update of test dependency file-worker version to 17.3
 - update of test dependency silly-io to new version to 3.1
+- improve of javadoc
 
 Version 2
 -------------
