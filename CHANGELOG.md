@@ -4,6 +4,13 @@
 Version 2.2-SNAPSHOT
 -------------
 
+CHANGED:
+
+- update gradle to new version 8.10
+- update of gradle-plugin dependency with id 'io.freefair.lombok' to new patch version 8.7.1
+- update of dependency state-pattern to new version 7.1
+- update of test dependency file-worker version to 17.4
+- update of test dependency junit-jupiter to new minor version 5.11.0
 
 Version 2.1
 -------------
