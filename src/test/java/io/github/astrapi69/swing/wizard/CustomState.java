@@ -26,6 +26,7 @@ package io.github.astrapi69.swing.wizard;
 
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardStateMachine;
+import io.github.astrapi69.design.pattern.state.wizard.model.WizardStateInfo;
 
 /**
  * The enum {@link CustomState} represents three wizard states and the cancel with the finish
@@ -64,6 +65,18 @@ public enum CustomState implements BaseWizardState<BaseWizardStateMachine>
 		{
 		}
 
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The finish {@link CustomState} object. */
@@ -96,10 +109,35 @@ public enum CustomState implements BaseWizardState<BaseWizardStateMachine>
 		{
 		}
 
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The first {@link CustomState} object. */
 	FIRST {
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 		@Override
 		public void cancel(final BaseWizardStateMachine stateMachine)
 		{
@@ -145,6 +183,19 @@ public enum CustomState implements BaseWizardState<BaseWizardStateMachine>
 
 	/** The second {@link CustomState} object. */
 	SECOND {
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 		@Override
 		public void cancel(final BaseWizardStateMachine stateMachine)
 		{
@@ -179,6 +230,19 @@ public enum CustomState implements BaseWizardState<BaseWizardStateMachine>
 
 	/** The third {@link CustomState} object. */
 	THIRD {
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 		@Override
 		public void cancel(final BaseWizardStateMachine stateMachine)
 		{
