@@ -5,8 +5,8 @@
 [![Java CI with Gradle](https://github.com/astrapi69/swing-wizard/actions/workflows/gradle.yml/badge.svg)](https://github.com/astrapi69/swing-wizard/actions/workflows/gradle.yml)
 [![Coverage Status](https://codecov.io/gh/astrapi69/swing-wizard/branch/develop/graph/badge.svg)](https://codecov.io/gh/astrapi69/swing-wizard)
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/swing-wizard.svg?style=flat)](https://github.com/astrapi69/swing-wizard/issues)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/swing-wizard/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/swing-wizard)
-[![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/swing-wizard.svg)](http://www.javadoc.io/doc/io.github.astrapi69/swing-wizard)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/swing-wizard)](https://central.sonatype.com/artifact/io.github.astrapi69/swing-wizard)
+[![Javadocs](https://javadoc.io/badge2/io.github.astrapi69/swing-wizard/javadoc.svg)](http://www.javadoc.io/doc/io.github.astrapi69/swing-wizard)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 
@@ -37,7 +37,7 @@ applications.
 
 ## gradle dependency
 
-Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/swing-wizard/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/swing-wizard)
+Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/swing-wizard)](https://central.sonatype.com/artifact/io.github.astrapi69/swing-wizard)
 
 You can first define the version in the ext section and add than the following gradle dependency to
 your project `build.gradle` if you want to import the core functionality of swing-wizard:
@@ -83,8 +83,7 @@ then add the dependency to the dependencies area
 
 ## Maven dependency
 
-Maven dependency is now on sonatype.
-Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~io.github.astrapi69~swing-wizard~~~) for latest snapshots and releases.
+The library is on Maven Central. Check out [Maven Central](https://central.sonatype.com/artifact/io.github.astrapi69/swing-wizard) for the latest release.
 
 Add the following maven dependency to your project `pom.xml` if you want to import the core
 functionality of swing-wizard:
@@ -120,8 +119,6 @@ Then you can add the dependency to your dependencies:
 
 ## 📸 Snapshots
 
-[![Snapshot](https://img.shields.io/badge/dynamic/xml?url=https://oss.sonatype.org/service/local/repositories/snapshots/content/io/github/astrapi69/swing-wizard/maven-metadata.xml&label=snapshot&color=red&query=.//versioning/latest)](https://oss.sonatype.org/content/repositories/snapshots/io/github/astrapi69/swing-wizard/)
-
 This section describes how to import snapshot versions into your project.
 Add the following code snippet to your gradle file in the repositories section:
 ```
@@ -130,8 +127,8 @@ repositories {
 ```
 ```groovy
     maven {
-        name "Sonatype Nexus Snapshots"
-        url "https://oss.sonatype.org/content/repositories/snapshots"
+        name "Central Portal Snapshots"
+        url "https://central.sonatype.com/repository/maven-snapshots/"
         mavenContent {
             snapshotsOnly()
         }
